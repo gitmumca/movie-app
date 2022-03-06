@@ -1,0 +1,300 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button,
+fa-facebook,
+fa-twitter {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:root {
+  --dark-color: #22254b;
+  --light-color: #373b69;
+  --search-color: #7378c5;
+
+  --font-white: #eee;
+  --font-lightgreen: lightgreen;
+  --font-orange: orange;
+  --font-red: red;
+/*  --font-search: #fff;*/
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url("assets/fonts/Merriweather-Bold.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 16px;
+  background-color: var(--light-color);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--dark-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 8px 16px;
+  color: var(--font-white);
+}
+
+.search::placeholder {
+  color: var(--search-color);
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--dark-color);
+}
+
+.close {
+  position: absolute;
+  margin: 8px 15px;
+  font-size: 30px;
+  color: var(--search-color);
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 16px;
+  background-color: var(--light-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.poster {
+  width: 100%;
+}
+.flex-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 16px 16px;
+  letter-spacing: 0.5px;
+
+  font-weight: 600;
+  font-size:  19px;
+  color: var(--font-white);
+}
+
+.title {
+  margin 0 0 18.72px;
+  margin-block-start: 8px;
+  margin-block-end: 16px;
+  line-height: 30px;
+/*  font-weight: 600;*/
+}
+
+.vote {
+  background-color: var(--dark-color);
+  padding: 8px;
+  border-radius: 3px;
+
+  font-size: 16px;
+}
+
+.below5 {
+  color: var(--font-red);
+}
+
+.over5 {
+  color: var(--font-orange);
+}
+
+.over8 {
+  color: var(--font-lightgreen);
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+
+  background-color: var(--font-white);
+  padding: 24px;
+}
+
+.article {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 24px 0 24px 0;
+}
+
+.overview-text {
+  line-height: 24px;
+  font-size:  16px;
+
+  color: black;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.flex-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+
+  height: 100px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.flex-git {
+  display: flex;
+  justify-content: space-between;
+
+  width: 230px;
+}
+
+.a-git,
+.a-year,
+.a-school {
+  color: var(--search-color);
+}
+
+.a-school {
+  width: 250px;
+}
+
+.a-git:hover,
+.a-school:hover {
+/*  color: var(--font-white);*/
+  opacity: 50%;
+}
+
+.flex-social{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 260px;
+}
+
+.flex-social i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+  width: 40px;
+  height: 40px;
+  background-color: var(--search-color);
+  border-radius: 10px;
+  font-size: 28px;
+  color: var(--dark-color);
+  opacity: 50%;
+}
+
+.flex-social i:hover{
+  background-color: var(--dark-color);
+  color: var(--search-color);
+  border-width: 1px;
+}
